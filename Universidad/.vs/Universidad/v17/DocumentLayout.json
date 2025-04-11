@@ -1,12 +1,241 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projects\\CasoPractico2\\Universidad\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\migrations\\20250411011834_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\migrations\\20250411011834_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\educador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\educador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\nota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\escueladbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\escueladbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\materia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\grupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\grupo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\models\\educadorxmateria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\models\\educadorxmateria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|c:\\xampp\\htdocs\\casopractico2\\universidad\\universidad\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FF1529C8-8691-464B-8E85-3A5D903670AC}|Universidad\\Universidad.csproj|solutionrelative:universidad\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250411011834_InitialCreate.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Migrations\\20250411011834_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Universidad\\Migrations\\20250411011834_InitialCreate.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Migrations\\20250411011834_InitialCreate.cs",
+              "RelativeToolTip": "Universidad\\Migrations\\20250411011834_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T01:18:35.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Nota.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Nota.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\Nota.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Nota.cs",
+              "RelativeToolTip": "Universidad\\Models\\Nota.cs",
+              "ViewState": "AgIAAAcAAAAwMzMzMzM9wBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:58:35.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Materia.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Materia.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\Materia.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Materia.cs",
+              "RelativeToolTip": "Universidad\\Models\\Materia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:57:52.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Estudiante.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Estudiante.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\Estudiante.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Estudiante.cs",
+              "RelativeToolTip": "Universidad\\Models\\Estudiante.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:57:35.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EscuelaDbContext.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\EscuelaDbContext.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\EscuelaDbContext.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\EscuelaDbContext.cs",
+              "RelativeToolTip": "Universidad\\Models\\EscuelaDbContext.cs",
+              "ViewState": "AgIAABwAAAAAMzMzMzMbwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:52:08.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Persona.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\Persona.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Persona.cs",
+              "RelativeToolTip": "Universidad\\Models\\Persona.cs",
+              "ViewState": "AgIAAAsAAACAmZmZmZkdwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:55:39.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\appsettings.json",
+              "RelativeDocumentMoniker": "Universidad\\appsettings.json",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\appsettings.json",
+              "RelativeToolTip": "Universidad\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-11T00:45:53.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Educador.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Educador.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\Educador.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Educador.cs",
+              "RelativeToolTip": "Universidad\\Models\\Educador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:56:03.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Grupo.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Grupo.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\Grupo.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\Grupo.cs",
+              "RelativeToolTip": "Universidad\\Models\\Grupo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:56:26.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Universidad\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:50:46.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EducadorXMateria.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\EducadorXMateria.cs",
+              "RelativeDocumentMoniker": "Universidad\\Models\\EducadorXMateria.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Models\\EducadorXMateria.cs",
+              "RelativeToolTip": "Universidad\\Models\\EducadorXMateria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:58:15.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Universidad\\appsettings.Development.json",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\appsettings.Development.json",
+              "RelativeToolTip": "Universidad\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-11T00:45:57.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Program.cs",
+              "RelativeDocumentMoniker": "Universidad\\Program.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Program.cs",
+              "RelativeToolTip": "Universidad\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T00:45:18.153Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

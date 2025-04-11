@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj": {}
+    "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj": {
+    "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj",
         "projectName": "Universidad",
-        "projectPath": "C:\\Projects\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj",
-        "packagesPath": "C:\\Users\\Melani\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\CasoPractico2\\Universidad\\Universidad\\obj\\",
+        "projectPath": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\Universidad.csproj",
+        "packagesPath": "C:\\Users\\sergi\\.nuget\\packages\\",
+        "outputPath": "C:\\xampp\\htdocs\\CasoPractico2\\Universidad\\Universidad\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Melani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sergi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,22 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
