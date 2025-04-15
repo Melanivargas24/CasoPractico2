@@ -1,0 +1,16 @@
+@page "{id:int}"
+@model DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Carrera";
+}
+
+<h1>¿Está seguro de que desea eliminar esta carrera?</h1>
+
+<div>
+    <h4>@Model.Carrera.Nombre</h4>
+    <form method="post">
+        <input type="hidden" asp-for="Carrera.Id" />
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-page="Index">Cancelar</a>
+    </form>
+</div>

@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Universidad.Models
 {
-    public class UniversidadDbContext : IdentityDbContext
+    public class UniversidadDBContext : IdentityDbContext
     {
-        public UniversidadDbContext(DbContextOptions<UniversidadDbContext> options)
+        public UniversidadDBContext(DbContextOptions<UniversidadDBContext> options)
             : base(options)
         {
         }
@@ -28,15 +28,17 @@ namespace Universidad.Models
                 .WithMany()
                 .HasForeignKey(u => u.PersonaId);
 
+
             modelBuilder.Entity<Materia>()
                 .HasOne(m => m.Carrera)
-                .WithMany()
+                .WithMany(c => c.Materias)
                 .HasForeignKey(m => m.CarreraId);
 
             modelBuilder.Entity<Grupo>()
                 .HasOne(g => g.Materia)
-                .WithMany()
+                .WithMany(m => m.Grupos)
                 .HasForeignKey(g => g.MateriaId);
+
 
             modelBuilder.Entity<Matricula>()
                 .HasOne(m => m.Usuario)

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Universidad.Models
@@ -8,12 +8,11 @@ namespace Universidad.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(100)]
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } = string.Empty;
 
-        [ForeignKey("Carrera")]
         public int CarreraId { get; set; }
+        public Carrera Carrera { get; set; } = null!;
 
-        public Carrera Carrera { get; set; }
+        public List<Grupo> Grupos { get; set; } = new();
     }
 }

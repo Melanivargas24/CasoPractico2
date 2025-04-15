@@ -10,8 +10,8 @@ using Universidad.Models;
 
 namespace Universidad.Migrations
 {
-    [DbContext(typeof(UniversidadDbContext))]
-    partial class UniversidadDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(UniversidadDBContext))]
+    partial class UniversidadDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -273,8 +273,7 @@ namespace Universidad.Migrations
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -429,7 +428,7 @@ namespace Universidad.Migrations
             modelBuilder.Entity("Universidad.Models.Grupo", b =>
                 {
                     b.HasOne("Universidad.Models.Materia", "Materia")
-                        .WithMany()
+                        .WithMany("Grupos")
                         .HasForeignKey("MateriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -440,7 +439,7 @@ namespace Universidad.Migrations
             modelBuilder.Entity("Universidad.Models.Materia", b =>
                 {
                     b.HasOne("Universidad.Models.Carrera", "Carrera")
-                        .WithMany()
+                        .WithMany("Materias")
                         .HasForeignKey("CarreraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -476,6 +475,16 @@ namespace Universidad.Migrations
                         .IsRequired();
 
                     b.Navigation("Persona");
+                });
+
+            modelBuilder.Entity("Universidad.Models.Carrera", b =>
+                {
+                    b.Navigation("Materias");
+                });
+
+            modelBuilder.Entity("Universidad.Models.Materia", b =>
+                {
+                    b.Navigation("Grupos");
                 });
 #pragma warning restore 612, 618
         }

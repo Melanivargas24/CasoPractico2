@@ -1,0 +1,33 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Carreras";
+}
+
+<h1 class="mb-4">Carreras</h1>
+
+<a class="btn btn-success mb-3" asp-page="/Carreras/Create">
+    <i class="bi bi-plus-lg"></i> Crear Nueva Carrera
+</a>
+
+<table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th style="width: 200px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Carreras)
+{
+        <tr>
+            <td>@item.Nombre</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-page="Edit" asp-route-id="@item.Id">Editar</a>
+                <a class="btn btn-sm btn-info" asp-page="Details" asp-route-id="@item.Id">Detalles</a>
+                <a class="btn btn-sm btn-danger" asp-page="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Universidad.Models
 {
@@ -8,6 +9,8 @@ namespace Universidad.Models
 
         [Required]
         [StringLength(100)]
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+
+        public List<Materia> Materias { get; set; } = new();
     }
 }
