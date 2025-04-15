@@ -428,7 +428,7 @@ namespace Universidad.Migrations
             modelBuilder.Entity("Universidad.Models.Grupo", b =>
                 {
                     b.HasOne("Universidad.Models.Materia", "Materia")
-                        .WithMany("Grupos")
+                        .WithMany()
                         .HasForeignKey("MateriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -439,7 +439,7 @@ namespace Universidad.Migrations
             modelBuilder.Entity("Universidad.Models.Materia", b =>
                 {
                     b.HasOne("Universidad.Models.Carrera", "Carrera")
-                        .WithMany("Materias")
+                        .WithMany()
                         .HasForeignKey("CarreraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -475,16 +475,6 @@ namespace Universidad.Migrations
                         .IsRequired();
 
                     b.Navigation("Persona");
-                });
-
-            modelBuilder.Entity("Universidad.Models.Carrera", b =>
-                {
-                    b.Navigation("Materias");
-                });
-
-            modelBuilder.Entity("Universidad.Models.Materia", b =>
-                {
-                    b.Navigation("Grupos");
                 });
 #pragma warning restore 612, 618
         }

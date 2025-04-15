@@ -1,0 +1,19 @@
+@page "{id:int}"
+@model DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Carrera";
+}
+
+<h1 class="text-center text-danger mb-4">⚠️ Confirmación de Eliminación</h1>
+
+<div class="card border-danger mx-auto" style="max-width: 600px;">
+    <div class="card-body text-center">
+        <p class="fs-5">Está seguro de que desea eliminar la carrera:</p>
+        <h4 class="text-danger fw-bold mb-4">@Model.Carrera.Nombre</h4>
+
+        <form method="post" class="d-flex justify-content-center gap-3">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</div>

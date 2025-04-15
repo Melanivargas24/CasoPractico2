@@ -1,0 +1,17 @@
+@page "{id:int}"
+@model DetailsModel
+@{
+    ViewData["Title"] = "Detalles de Carrera";
+}
+
+<h1 class="text-center mb-4">Detalles de Carrera</h1>
+
+<div class="card mx-auto" style="max-width: 500px;">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Carrera.Nombre</h5>
+        <div class="d-flex justify-content-between mt-4">
+            <a asp-page="Edit" asp-route-id="@Model.Carrera.Id" class="btn btn-primary">Editar</a>
+            <a asp-page="Index" class="btn btn-secondary">Volver a la lista</a>
+        </div>
+    </div>
+</div>
