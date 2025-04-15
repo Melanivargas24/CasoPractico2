@@ -12,7 +12,7 @@ using Universidad.Models;
 namespace Universidad.Migrations
 {
     [DbContext(typeof(UniversidadDBContext))]
-    [Migration("20250415074040_InitialCreate")]
+    [Migration("20250415093348_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

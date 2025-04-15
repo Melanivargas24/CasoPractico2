@@ -1,0 +1,22 @@
+@page "{id:int}"
+@model Universidad.Pages.Grupos.DetailsModel
+@{
+    ViewData["Title"] = "Detalles del Grupo";
+}
+
+<h1 class="text-center mb-4">Detalles del Grupo</h1>
+
+<div class="container w-50 border p-4 rounded">
+    <dl class="row">
+        <dt class="col-sm-4">Horario</dt>
+        <dd class="col-sm-8">@Model.Grupo.Horario</dd>
+
+        <dt class="col-sm-4">Materia</dt>
+        <dd class="col-sm-8">@Model.Grupo.Materia.Nombre</dd>
+    </dl>
+
+    <div class="mt-4 d-flex justify-content-between">
+        <a asp-page="Edit" asp-route-id="@Model.Grupo.Id" class="btn btn-primary">Editar</a>
+        <a asp-page="Index" class="btn btn-secondary">Volver a la lista</a>
+    </div>
+</div>

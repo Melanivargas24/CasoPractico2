@@ -1,0 +1,34 @@
+@page
+@model Universidad.Pages.Grupos.CreateModel
+@{
+    ViewData["Title"] = "Agregar Grupo";
+}
+
+<h1 class="text-3xl font-bold text-center mb-4">Agregar Grupo</h1>
+
+<div class="container w-50 border p-4 rounded">
+    <form method="post">
+        <div class="mb-4">
+            <label asp-for="Grupo.Horario" class="form-label">Horario</label>
+            <input asp-for="Grupo.Horario" class="form-control" />
+            <span asp-validation-for="Grupo.Horario" class="text-danger"></span>
+        </div>
+
+        <div class="mb-4">
+            <label asp-for="Grupo.MateriaId" class="form-label">Materia</label>
+            <select asp-for="Grupo.MateriaId" asp-items="Model.MateriasSelectList" class="form-select">
+                <option disabled selected value="">Seleccioná una materia</option>
+            </select>
+            <span asp-validation-for="Grupo.MateriaId" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

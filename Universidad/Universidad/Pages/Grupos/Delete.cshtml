@@ -1,0 +1,27 @@
+@page "{id:int}"
+@model Universidad.Pages.Grupos.DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Grupo";
+}
+
+<h1 class="text-center text-danger mb-4">Eliminar Grupo</h1>
+
+<div class="container w-50 border p-4 rounded">
+    <h4 class="mb-3">¿Estás seguro de que querés eliminar este grupo?</h4>
+
+    <dl class="row">
+        <dt class="col-sm-4">Horario</dt>
+        <dd class="col-sm-8">@Model.Grupo.Horario</dd>
+
+        <dt class="col-sm-4">Materia</dt>
+        <dd class="col-sm-8">@Model.Grupo.Materia.Nombre</dd>
+    </dl>
+
+    <form method="post">
+        <input type="hidden" asp-for="Grupo.Id" />
+        <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
