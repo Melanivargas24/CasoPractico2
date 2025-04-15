@@ -1,0 +1,30 @@
+@page "{id:int}"
+@model Universidad.Pages.Materias.DetailsModel
+@{
+    ViewData["Title"] = "Detalles de Materia";
+}
+
+<div class="card mx-auto shadow p-4" style="max-width: 600px;">
+    <h2 class="text-center mb-4">Detalles de Materia</h2>
+
+    <dl class="row">
+        <dt class="col-sm-4">Nombre</dt>
+        <dd class="col-sm-8">@Model.Materia.Nombre</dd>
+
+        <dt class="col-sm-4">Carreras Asociadas</dt>
+        <dd class="col-sm-8">
+            <ul>
+                @foreach (var carrera in Model.Carreras)
+                {
+                    <li>@carrera.Nombre</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+
+    <div class="d-flex justify-content-between mt-4">
+        <a asp-page="Edit" asp-route-id="@Model.Materia.Id" class="btn btn-primary">Editar</a>
+        <a asp-page="Delete" asp-route-id="@Model.Materia.Id" class="btn btn-danger">Eliminar</a>
+        <a asp-page="Index" class="btn btn-secondary">Volver a la lista</a>
+    </div>
+</div>

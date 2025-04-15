@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QObJGjkIKks=",
+  "dgSpecHash": "o7kUMPYJeLk=",
   "success": true,
-  "projectFilePath": "/Users/sthvnbb/Documents/Fidelitas/2025/Programación Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj",
+  "projectFilePath": "/Users/sthvnbb/Documents/Fidelitas/2025/Programacion Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj",
   "expectedPackageFiles": [
     "/Users/sthvnbb/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/sthvnbb/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",

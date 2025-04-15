@@ -10,8 +10,7 @@ namespace Universidad.Models
         [Required]
         public string Nombre { get; set; } = string.Empty;
 
-        public int CarreraId { get; set; }
-        public Carrera Carrera { get; set; } = null!;
+        public List<MateriaCarrera> MateriasCarreras { get; set; } = new();
 
         public List<Grupo> Grupos { get; set; } = new();
     }

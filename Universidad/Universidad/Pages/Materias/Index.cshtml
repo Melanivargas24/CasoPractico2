@@ -1,0 +1,39 @@
+@page
+@model Universidad.Pages.Materias.IndexModel
+@{
+    ViewData["Title"] = "Lista de Materias";
+}
+
+<h1 class="text-center mb-4">Materias</h1>
+
+<p>
+    <a asp-page="Create" class="btn btn-primary"> <i class="bi bi-plus"></i>Agregar Nueva Materia</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Carreras</th>
+            <th class="text-center" style="width: 250px;">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var materia in Model.Materias)
+    {
+        <tr>
+            <td>@materia.Nombre</td>
+            <td>
+                @string.Join(", ", materia.MateriasCarreras.Select(mc => mc.Carrera.Nombre))
+            </td>
+            <td class="text-center">
+                <div class="d-flex justify-content-center gap-2">
+                    <a asp-page="Details" asp-route-id="@materia.Id" class="btn btn-info btn-sm text-white">Detalles</a>
+                    <a asp-page="Edit" asp-route-id="@materia.Id" class="btn btn-primary btn-sm">Editar</a>
+                    <a asp-page="Delete" asp-route-id="@materia.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </div>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

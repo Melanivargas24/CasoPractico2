@@ -11,6 +11,6 @@ namespace Universidad.Models
         [StringLength(100)]
         public string Nombre { get; set; } = string.Empty;
 
-        public List<Materia> Materias { get; set; } = new();
+        public List<MateriaCarrera> MateriasCarreras { get; set; } = new();
     }
 }

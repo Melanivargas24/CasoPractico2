@@ -1,0 +1,29 @@
+@page "{id:int}"
+@model Universidad.Pages.Materias.DeleteModel
+@{
+    ViewData["Title"] = "Eliminar Materia";
+}
+
+<div class="card mx-auto shadow p-4" style="max-width: 600px;">
+    <h2 class="text-center text-danger mb-4">¿Desea eliminar esta materia?</h2>
+
+    <dl class="row">
+        <dt class="col-sm-4">Nombre</dt>
+        <dd class="col-sm-8">@Model.Materia.Nombre</dd>
+
+        <dt class="col-sm-4">Carreras Asociadas</dt>
+        <dd class="col-sm-8">
+            <ul>
+                @foreach (var carrera in Model.Carreras)
+                {
+                    <li>@carrera.Nombre</li>
+                }
+            </ul>
+        </dd>
+    </dl>
+
+    <form method="post" class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+        <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

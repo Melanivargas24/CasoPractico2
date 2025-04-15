@@ -268,18 +268,28 @@ namespace Universidad.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CarreraId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.ToTable("Materias");
+                });
+
+            modelBuilder.Entity("Universidad.Models.MateriaCarrera", b =>
+                {
+                    b.Property<int>("MateriaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarreraId")
+                        .HasColumnType("int");
+
+                    b.HasKey("MateriaId", "CarreraId");
+
                     b.HasIndex("CarreraId");
 
-                    b.ToTable("Materias");
+                    b.ToTable("MateriasCarreras");
                 });
 
             modelBuilder.Entity("Universidad.Models.Matricula", b =>
@@ -428,7 +438,7 @@ namespace Universidad.Migrations
             modelBuilder.Entity("Universidad.Models.Grupo", b =>
                 {
                     b.HasOne("Universidad.Models.Materia", "Materia")
-                        .WithMany()
+                        .WithMany("Grupos")
                         .HasForeignKey("MateriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -436,15 +446,23 @@ namespace Universidad.Migrations
                     b.Navigation("Materia");
                 });
 
-            modelBuilder.Entity("Universidad.Models.Materia", b =>
+            modelBuilder.Entity("Universidad.Models.MateriaCarrera", b =>
                 {
                     b.HasOne("Universidad.Models.Carrera", "Carrera")
-                        .WithMany()
+                        .WithMany("MateriasCarreras")
                         .HasForeignKey("CarreraId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Universidad.Models.Materia", "Materia")
+                        .WithMany("MateriasCarreras")
+                        .HasForeignKey("MateriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Carrera");
+
+                    b.Navigation("Materia");
                 });
 
             modelBuilder.Entity("Universidad.Models.Matricula", b =>
@@ -475,6 +493,18 @@ namespace Universidad.Migrations
                         .IsRequired();
 
                     b.Navigation("Persona");
+                });
+
+            modelBuilder.Entity("Universidad.Models.Carrera", b =>
+                {
+                    b.Navigation("MateriasCarreras");
+                });
+
+            modelBuilder.Entity("Universidad.Models.Materia", b =>
+                {
+                    b.Navigation("Grupos");
+
+                    b.Navigation("MateriasCarreras");
                 });
 #pragma warning restore 612, 618
         }

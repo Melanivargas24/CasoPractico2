@@ -64,6 +64,19 @@ namespace Universidad.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Materias",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Materias", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Personas",
                 columns: table => new
                 {
@@ -187,21 +200,45 @@ namespace Universidad.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Materias",
+                name: "Grupos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Horario = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MateriaId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Grupos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Grupos_Materias_MateriaId",
+                        column: x => x.MateriaId,
+                        principalTable: "Materias",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MateriasCarreras",
+                columns: table => new
+                {
+                    MateriaId = table.Column<int>(type: "int", nullable: false),
                     CarreraId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Materias", x => x.Id);
+                    table.PrimaryKey("PK_MateriasCarreras", x => new { x.MateriaId, x.CarreraId });
                     table.ForeignKey(
-                        name: "FK_Materias_Carreras_CarreraId",
+                        name: "FK_MateriasCarreras_Carreras_CarreraId",
                         column: x => x.CarreraId,
                         principalTable: "Carreras",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MateriasCarreras_Materias_MateriaId",
+                        column: x => x.MateriaId,
+                        principalTable: "Materias",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -224,26 +261,6 @@ namespace Universidad.Migrations
                         name: "FK_Usuarios_Personas_PersonaId",
                         column: x => x.PersonaId,
                         principalTable: "Personas",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Grupos",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Horario = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MateriaId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Grupos", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Grupos_Materias_MateriaId",
-                        column: x => x.MateriaId,
-                        principalTable: "Materias",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -320,8 +337,8 @@ namespace Universidad.Migrations
                 column: "MateriaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Materias_CarreraId",
-                table: "Materias",
+                name: "IX_MateriasCarreras_CarreraId",
+                table: "MateriasCarreras",
                 column: "CarreraId");
 
             migrationBuilder.CreateIndex(
@@ -359,6 +376,9 @@ namespace Universidad.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "MateriasCarreras");
+
+            migrationBuilder.DropTable(
                 name: "Matriculas");
 
             migrationBuilder.DropTable(
@@ -366,6 +386,9 @@ namespace Universidad.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Carreras");
 
             migrationBuilder.DropTable(
                 name: "Grupos");
@@ -378,9 +401,6 @@ namespace Universidad.Migrations
 
             migrationBuilder.DropTable(
                 name: "Personas");
-
-            migrationBuilder.DropTable(
-                name: "Carreras");
         }
     }
 }

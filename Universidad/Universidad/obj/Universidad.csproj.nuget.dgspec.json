@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sthvnbb/Documents/Fidelitas/2025/Programación Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj": {}
+    "/Users/sthvnbb/Documents/Fidelitas/2025/Programacion Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj": {}
   },
   "projects": {
-    "/Users/sthvnbb/Documents/Fidelitas/2025/Programación Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj": {
+    "/Users/sthvnbb/Documents/Fidelitas/2025/Programacion Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sthvnbb/Documents/Fidelitas/2025/Programación Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj",
+        "projectUniqueName": "/Users/sthvnbb/Documents/Fidelitas/2025/Programacion Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj",
         "projectName": "Universidad",
-        "projectPath": "/Users/sthvnbb/Documents/Fidelitas/2025/Programación Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj",
+        "projectPath": "/Users/sthvnbb/Documents/Fidelitas/2025/Programacion Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/Universidad.csproj",
         "packagesPath": "/Users/sthvnbb/.nuget/packages/",
-        "outputPath": "/Users/sthvnbb/Documents/Fidelitas/2025/Programación Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/obj/",
+        "outputPath": "/Users/sthvnbb/Documents/Fidelitas/2025/Programacion Avanzada/Caso de Estudio 2/CasoPractico2/Universidad/Universidad/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/sthvnbb/.nuget/NuGet/NuGet.Config"
