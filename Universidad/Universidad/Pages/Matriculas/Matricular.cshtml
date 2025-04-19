@@ -1,0 +1,60 @@
+﻿@page
+@model Universidad.Pages.Matriculas.MatriculaModel
+@{
+    ViewData["Title"] = "Matricularse";
+}
+
+<h2 class="text-center mb-4">Matrícula</h2>
+
+<form method="post" class="border rounded p-4 shadow-sm bg-light">
+    <div class="mb-3">
+        <label class="form-label">Carrera</label>
+        <select class="form-select" asp-for="MatriculaVM.CarreraId"
+                asp-items="@(new SelectList(Model.MatriculaVM.Carreras, "Id", "Nombre"))"
+                onchange="this.form.action='?handler=GetMaterias'; this.form.submit();">
+            <option value="">Seleccione</option>
+        </select>
+    </div>
+
+    @if (Model.MatriculaVM.Materias.Any())
+    {
+        <div class="mb-3">
+            <label class="form-label">Materia</label>
+            <select class="form-select" asp-for="MatriculaVM.MateriaId"
+                    asp-items="@(new SelectList(Model.MatriculaVM.Materias, "Id", "Nombre"))"
+                    onchange="this.form.action='?handler=GetGrupos'; this.form.submit();">
+                <option value="">Seleccione</option>
+            </select>
+        </div>
+    }
+
+    @if (Model.MatriculaVM.Grupos.Any())
+    {
+        <div class="mb-3">
+            <label class="form-label">Grupo (Horario)</label>
+            <select class="form-select" asp-for="MatriculaVM.GrupoId"
+                    asp-items="@(new SelectList(Model.MatriculaVM.Grupos, "Id", "Horario"))">
+                <option value="">Seleccione</option>
+            </select>
+        </div>
+
+        <div class="text-end">
+            <button type="submit" asp-page-handler="Registrar" class="btn btn-primary">
+                <i class="bi bi-check-circle"></i> Matricular
+            </button>
+        </div>
+    }
+
+    @if (ViewData["Mensaje"] != null)
+    {
+        <div class="alert alert-success mt-3">
+            @ViewData["Mensaje"]
+        </div>
+    }
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
