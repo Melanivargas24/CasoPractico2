@@ -6,16 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Universidad.Models;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace Universidad.Pages.Matriculas
 {
     public class MatriculaModel : PageModel
     {
         private readonly UniversidadDBContext _context;
+        private readonly UserManager<Usuario> _userManager;
 
-        public MatriculaModel(UniversidadDBContext context)
+        public MatriculaModel(UniversidadDBContext context, UserManager<Usuario> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         [BindProperty]
@@ -53,7 +57,7 @@ namespace Universidad.Pages.Matriculas
             return Page();
         }
 
-        public IActionResult OnPostRegistrar()
+        public async Task<IActionResult> OnPostRegistrar()
         {
             if (!ModelState.IsValid)
             {
@@ -69,15 +73,22 @@ namespace Universidad.Pages.Matriculas
                 return Page();
             }
 
+            var usuario = await _userManager.GetUserAsync(User);
+
+            if (usuario == null)
+            {
+                return Unauthorized(); // Usuario no autenticado
+            }
+
             var matricula = new Matricula
             {
-                UsuarioId = 1,
+                UsuarioId = usuario.Id,
                 GrupoId = MatriculaVM.GrupoId,
                 FechaMatricula = DateTime.Now
             };
 
-            _context.Matriculas.Add(matricula);         
-            _context.SaveChanges();
+            _context.Matriculas.Add(matricula);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("/Matriculas/Index");
         }

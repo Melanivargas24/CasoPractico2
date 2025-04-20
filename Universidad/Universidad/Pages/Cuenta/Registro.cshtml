@@ -1,0 +1,73 @@
+@page
+@model Universidad.Pages.Cuenta.RegistroModel
+@{
+    ViewData["Title"] = "Registro";
+}
+
+<h2 class="text-center mb-4">Registro de Usuario</h2>
+
+
+
+<div class="container w-50 border p-4 rounded">
+
+    @if (TempData["RegistroExitoso"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["RegistroExitoso"]
+        </div>
+    }
+    <form method="post">
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Nombre" class="form-label"></label>
+            <input asp-for="Input.Nombre" class="form-control" />
+            <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Apellido" class="form-label"></label>
+            <input asp-for="Input.Apellido" class="form-control" />
+            <span asp-validation-for="Input.Apellido" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Correo" class="form-label"></label>
+            <input asp-for="Input.Correo" class="form-control" />
+            <span asp-validation-for="Input.Correo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Telefono" class="form-label"></label>
+            <input asp-for="Input.Telefono" class="form-control" />
+            <span asp-validation-for="Input.Telefono" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Tipo" class="form-label"></label>
+            <select asp-for="Input.Tipo" class="form-select">
+                <option value="">Seleccione un tipo</option>
+                <option>Estudiante</option>
+                <option>Administrador</option>
+            </select>
+            <span asp-validation-for="Input.Tipo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Password" class="form-label"></label>
+            <input asp-for="Input.Password" class="form-control" type="password" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.ConfirmPassword" class="form-label"></label>
+            <input asp-for="Input.ConfirmPassword" class="form-control" type="password" />
+            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+            <a asp-page="/Index" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>

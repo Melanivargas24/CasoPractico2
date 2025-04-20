@@ -1,0 +1,44 @@
+@page
+@model Universidad.Pages.Cuenta.LoginModel
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+
+<h2 class="text-center mb-4">Iniciar Sesión</h2>
+
+<div class="container w-50 border p-4 rounded">
+
+    @if (TempData["RegistroExitoso"] != null)
+    {
+        <div class="alert alert-success">@TempData["RegistroExitoso"]</div>
+    }
+
+    <form method="post">
+        <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Email" class="form-label">Correo</label>
+            <input asp-for="Input.Email" class="form-control" />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Input.Password" class="form-label">Contraseña</label>
+            <input asp-for="Input.Password" type="password" class="form-control" />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-check mb-3">
+            <input asp-for="Input.RememberMe" class="form-check-input" />
+            <label asp-for="Input.RememberMe" class="form-check-label">Recordarme</label>
+        </div>
+
+        <div class="text-end">
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -5,47 +5,57 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 class="text-center mb-4">Matrículas</h1>
+@if (User.Identity?.IsAuthenticated ?? false)
+{
 
-<div class="mb-3 text-start">
-    <a asp-page="/Matriculas/Matricular" class="btn btn-success">
-        <i class="bi bi-plus"></i> Matricular materias
-    </a>
-</div>
+    <h1 class="text-center mb-4">Matrículas</h1>
 
-<table class="table table-striped table-bordered">
-    <thead class="table-dark">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Matricula[0].FechaMatricula)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Matricula[0].Usuario)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Matricula[0].Grupo.Materia.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Matricula[0].Grupo)
-            </th>
-            <th class="text-center" style="width: 200px;">Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Matricula)
-        {
+    <div class="mb-3 text-start">
+        <a asp-page="/Matriculas/Matricular" class="btn btn-success">
+            <i class="bi bi-plus"></i> Matricular materias
+        </a>
+    </div>
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.FechaMatricula)</td>
-                <td>@Html.DisplayFor(modelItem => item.Usuario.Username)</td>
-                <td>@Html.DisplayFor(modelItem => item.Grupo.Materia.Nombre)</td>
-                <td>@Html.DisplayFor(modelItem => item.Grupo.Horario)</td>
-                <td class="text-center">
-                    <div class="d-flex justify-content-center gap-2">
-                        <a asp-page="/Matriculas/Eliminar" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Cancelar matrícula</a>
-                    </div>
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matricula[0].FechaMatricula)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matricula[0].Usuario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matricula[0].Grupo.Materia.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Matricula[0].Grupo)
+                </th>
+                <th class="text-center" style="width: 200px;">Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Matricula)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.FechaMatricula)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Usuario.UserName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Grupo.Materia.Nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Grupo.Horario)</td>
+                    <td class="text-center">
+                        <div class="d-flex justify-content-center gap-2">
+                            <a asp-page="/Matriculas/Eliminar" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Cancelar matrícula</a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
+}
+else
+{
+    <div class="alert alert-info text-center mt-5">
+        Iniciá sesión para ver tus matrículas.
+    </div>
+}

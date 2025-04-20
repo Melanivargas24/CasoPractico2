@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Universidad.Models
 {
-    public class UniversidadDBContext : IdentityDbContext
+    public class UniversidadDBContext : IdentityDbContext<Usuario>
     {
         public UniversidadDBContext(DbContextOptions<UniversidadDBContext> options)
             : base(options)

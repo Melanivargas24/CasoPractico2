@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Universidad.Models
 {
@@ -7,14 +8,14 @@ namespace Universidad.Models
         public int Id { get; set; }
 
         [ForeignKey("Usuario")]
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; } = string.Empty;
 
         [ForeignKey("Grupo")]
         public int GrupoId { get; set; }
 
         public DateTime FechaMatricula { get; set; }
 
-        public Usuario Usuario { get; set; }
+        public Usuario Usuario { get; set; } = null!;
         public Grupo Grupo { get; set; }
     }
 }

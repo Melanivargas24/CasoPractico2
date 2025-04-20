@@ -4,6 +4,13 @@
     ViewData["Title"] = "Inicio";
 }
 
+@if (TempData["LogoutMessage"] != null)
+{
+    <div class="alert alert-info text-center">
+        @TempData["LogoutMessage"]
+    </div>
+}
+
 <h2 class="titulo text-center my-4">BIENVENIDOS A LA UNIVERSIDAD CHINCHILLA</h2>
 
 <div class="container my-5">
@@ -19,16 +26,16 @@
         <!-- Contenido del carrusel -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1486&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Ilustración">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1486&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Ilustraciï¿½n">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Universidad Chinchilla</h3>
-                    <p>Exposición</p>
+                    <p>ExposiciÃ³n</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="https://institutocarlrogersvillahermosa.com/wp-content/uploads/2022/04/entrar-a-la-universidad.jpg" class="d-block w-100" alt="Matricula">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Matrícula</h3>
+                    <h3>MatrÃ­cula</h3>
                     <p>Matricula 100% virtual</p>
                 </div>
             </div>
@@ -42,7 +49,7 @@
             <div class="carousel-item">
                 <img src="https://usil-blog.s3.amazonaws.com/PROD/blog/image/estudiar-universidad-acreditada.jpg" class="d-block w-100" alt="Ingenieria">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Número 1 en Ingeniería</h3>
+                    <h3>NÃºmero 1 en IngenierÃ­a</h3>
                     <p>Carreras</p>
                 </div>
             </div>
@@ -59,3 +66,45 @@
         </button>
     </div>
 </div>
+
+
+<style>
+    .carousel-caption h3,
+    .carousel-caption p {
+        color: white;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-inner {
+        height: 580px;
+    }
+
+    .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        backdrop-filter: blur(4px);
+        bottom: 1.5rem;
+    }
+
+    @@media (max-width: 768px) {
+        .carousel-inner {
+            height: 300px;
+        }
+
+        .carousel-caption {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+    }
+</style>
